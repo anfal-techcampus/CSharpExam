@@ -1,0 +1,22 @@
+@model UserLogin;
+
+<form asp-action="LoginForm" asp-controller="User" class="shadow-lg p-3 my-2 rounded">
+    <h3 class="text-center text-muted">Login</h3>
+    
+    
+    <div class="form-group">
+        <label asp-for="UserNameLogin"></label>
+        <input asp-for="UserNameLogin" class="form-control">
+        <span asp-validation-for="UserNameLogin" class="text-danger"></span>
+    </div>
+
+      
+    <div class="form-group">
+        <label asp-for="PasswordLogin"></label>
+        <input asp-for="PasswordLogin" class="form-control">
+        <span asp-validation-for="PasswordLogin" class="text-danger"></span>
+    </div>
+
+    <button class="btn btn-outline-dark">Login</button>
+</form>
+

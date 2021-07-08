@@ -1,0 +1,18 @@
+<h1 class="text-muted text-center m-2">Hobbies</h1>
+<table class="table table-striped">
+    <thead>
+        <th>Name</th>
+        <th>Enthusiasts</th>
+        
+    </thead>
+    <tbody>
+        @foreach (var hobby in ViewBag.allHobbies)
+        {
+            <tr>
+                <td><a href="/details/@hobby.HobbyId">@hobby.HobbyName</a></td>
+                <td>@hobby.Enthusiasts.Count</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a class="btn btn-outline-dark" href="/new">Create a Hobby</a>
